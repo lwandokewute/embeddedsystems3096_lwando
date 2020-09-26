@@ -34,7 +34,7 @@ def main():
             GPIO.output(16, LED_NEXT_STATE[0])
         
         GPIO.remove_event_detect(18)
-        time.sleep(0.2) # 0.2 second time delay
+        time.sleep(0.02) # 0.02 second time delay
         
         #def my_callback(channel):
             #print('This is a edge event callback function!')
