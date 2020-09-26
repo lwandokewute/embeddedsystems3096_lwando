@@ -34,7 +34,8 @@ def main():
             GPIO.output(16, LED_NEXT_STATE[0])
         
         GPIO.remove_event_detect(18)
-
+        time.sleep(1) # 1 second time delay
+        
 #TRIAL & EXCEPTION
 if __name__ == "__main__":
     try:
