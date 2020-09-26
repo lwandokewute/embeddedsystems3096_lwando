@@ -27,13 +27,14 @@ LED_NEXT_STATE = [True]
 #Main function for using the switch
 def main():
     while True:    
-        channel = GPIO.wait_for_edge(18, GPIO.FALLING, timeout=1000)
+        channel = GPIO.wait_for_edge(18, GPIO.FALLING)
         if channel is 0:
             print('Press detected')
             LED_NEXT_STATE[0] = not LED_NEXT_STATE[0]
             GPIO.output(16, LED_NEXT_STATE[0])
         
         GPIO.remove_event_detect(18)
+        time.sleep(0.2) # 0.2 second time delay
         
         #def my_callback(channel):
             #print('This is a edge event callback function!')
