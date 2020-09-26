@@ -1,4 +1,5 @@
 import RPi.GPIO as GPIO
+import time
 
 #Specifying the numbering system
 GPIO.setmode(GPIO.BOARD)
@@ -13,18 +14,20 @@ GPIO.setup(18, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 #Output is pin 14, the led with initial value
 GPIO.setup(16, GPIO.OUT, initial=1)
 
-time.sleep(800) # 1 second time delay
+time.sleep(1) # 1 second time delay
 GPIO.output(16, GPIO.LOW)
-time.sleep(800) # 1 second time delay
+time.sleep(1) # 1 second time delay
 GPIO.output(16, GPIO.HIGH)
-time.sleep(800) # 1 second time delay
+time.sleep(1) # 1 second time delay
 GPIO.output(16, GPIO.LOW)
-time.sleep(800) # 1 second time delay
+time.sleep(1) # 1 second time delay
 GPIO.output(16, GPIO.HIGH)
-time.sleep(800) # 1 second time delay
+time.sleep(1) # 1 second time delay
 GPIO.output(16, GPIO.LOW)
-time.sleep(800) # 1 second time delay
+time.sleep(1) # 1 second time delay
 GPIO.output(16, GPIO.HIGH)
+time.sleep(1) # 1 second time delay
+GPIO.output(16, GPIO.LOW)
 
 #Main function
 #def main():
