@@ -5,7 +5,7 @@ GPIO.setmode(GPIO.BOARD)
 
 #Setting the gpio's modes
 #Input is pin 15, the push button
-GPIO.setup(15, GPIO.IN)
+#GPIO.setup(15, GPIO.IN)
 
 #Enabling PullUp/PullDown for default state of the input (avoiding floating input)
 GPIO.setup(15, GPIO.IN, pull_up_down=GPIO.PUD_UP)
