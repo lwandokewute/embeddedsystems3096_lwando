@@ -25,10 +25,10 @@ GPIO.setup(16, GPIO.OUT, initial=1)
 #Main function for using the switch
 def main():
     for i in range(10):
-        GPIO.wait_for_edge(15, GPIO.FALLING)
-        GPIO.output(13, GPIO.LOW)
-        GPIO.wait_for_edge(15, GPIO.FALLING)
-        GPIO.output(13, GPIO.HIGH)
+        GPIO.wait_for_edge(18, GPIO.FALLING)
+        GPIO.output(16, GPIO.LOW)
+        GPIO.wait_for_edge(18, GPIO.FALLING)
+        GPIO.output(16, GPIO.HIGH)
         
 
 #TRIAL & EXCEPTION
