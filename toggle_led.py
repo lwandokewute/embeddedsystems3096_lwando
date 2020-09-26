@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import RPi.GPIO as GPIO
 import time
 
@@ -45,4 +43,3 @@ if __name__ == "__main__":
         print("Some other error occurred: {}".format(e.message))
         GPIO.cleanup()
 GPIO.cleanup()
->>>>>>> d54664b8881644bbb8ff80d4d6cb434457e89d02
