@@ -30,6 +30,6 @@ if __name__ == "__main__":
         print("Exiting gracefully")
         GPIO.cleanup()
     except e:
-        print("Some other error occurred: {}".format(e.message)})
+        print("Some other error occurred: {}".format(e.message))
         GPIO.cleanup()
 GPIO.cleanup()
