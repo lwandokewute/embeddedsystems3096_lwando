@@ -9,18 +9,18 @@ GPIO.setmode(GPIO.BOARD)
 #GPIO.setup(15, GPIO.IN)
 
 #Enabling PullUp/PullDown for default state of the input (avoiding floating input)
-GPIO.setup(15, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(18, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 #Output is pin 14, the led with initial value
-GPIO.setup(13, GPIO.OUT, initial=1)
+GPIO.setup(16, GPIO.OUT, initial=1)
 
 #Main function for toggling the led
 def main():
     for i in range(10):
         time.sleep(1) # 1 second time delay
-        GPIO.output(13, GPIO.LOW)
+        GPIO.output(16, GPIO.LOW)
         time.sleep(1) # 1 second time delay
-        GPIO.output(13, GPIO.HIGH)
+        GPIO.output(16, GPIO.HIGH)
 
 #Main function for using the switch
 #def main():
