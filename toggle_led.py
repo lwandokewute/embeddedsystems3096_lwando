@@ -47,6 +47,7 @@ def main():
             GPIO.output(16, LED_NEXT_STATE[0])
         else:
             #nothing happens
+        GPIO.remove_event_detect(18)
         
 
 #TRIAL & EXCEPTION
