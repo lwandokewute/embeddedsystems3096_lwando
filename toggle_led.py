@@ -24,7 +24,7 @@ GPIO.setup(16, GPIO.OUT, initial=1)
 
 #Main function for using the switch
 def main():
-    while True:
+    for in range(100):
         GPIO.wait_for_edge(18, GPIO.RISING)
         GPIO.output(16, GPIO.LOW)
         GPIO.wait_for_edge(18, GPIO.RISING)
