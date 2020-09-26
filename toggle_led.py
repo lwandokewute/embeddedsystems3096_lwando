@@ -22,17 +22,17 @@ GPIO.setup(16, GPIO.OUT, initial=1)
 #        time.sleep(1) # 1 second time delay
 #        GPIO.output(16, GPIO.HIGH)
 
-LED_NEXT_STATE = 0
+LED_NEXT_STATE = [True]
 
 #Main function for using the switch
 def main():
    
     def my_callback(channel):
         print('This is a edge event callback function!')
-        LED_NEXT_STATE = not LED_NEXT_STATE
+        LED_NEXT_STATE[0] = not LED_NEXT_STATE[0]
     
     GPIO.add_event_detect(18, GPIO.FALLING, callback=my_callback, bouncetime=200)
-    GPIO.output(16, LED_NEXT_STATE)
+    GPIO.output(16, LED_NEXT_STATE[0])
 #    for i in range(8):
  #        if GPIO.input(18) is 0:
   #           GPIO.output(16, LED_NEXT_STATE)
