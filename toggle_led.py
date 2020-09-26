@@ -32,8 +32,7 @@ def main():
             print('Press detected')
             LED_NEXT_STATE[0] = not LED_NEXT_STATE[0]
             GPIO.output(16, LED_NEXT_STATE[0])
-        else:
-            #nothing happens
+        
         GPIO.remove_event_detect(18)
         
         #def my_callback(channel):
