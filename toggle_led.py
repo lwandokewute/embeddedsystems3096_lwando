@@ -33,7 +33,7 @@ def main():
     GPIO.add_event_detect(18, GPIO.FALLING, callback=my_callback, bouncetime=200)
     
     for i in range(8):
-         if GPIO.input(7) is 0:
+         if GPIO.input(18) is 0:
              GPIO.output(16, LED_NEXT_STATE)
              LED_NEXT_STATE != LED_NEXT_STATE
          time.sleep(0.5) # 0.5 second time delay
@@ -44,7 +44,8 @@ def main():
 if __name__ == "__main__":
     # Make sure the GPIO is stopped correctly
     try:
-        main()
+        while True:
+            main()
     except KeyboardInterrupt:
         print("Exiting gracefully")
         GPIO.cleanup()
