@@ -29,7 +29,7 @@ def main():
    
     def my_callback(channel):
         print('This is a edge event callback function!')
-        LED_NEXT_STATE = !LED_NEXT_STATE
+        LED_NEXT_STATE = not LED_NEXT_STATE
     
     GPIO.add_event_detect(18, GPIO.FALLING, callback=my_callback, bouncetime=200)
     GPIO.output(16, LED_NEXT_STATE)
