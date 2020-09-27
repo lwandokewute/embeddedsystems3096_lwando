@@ -32,7 +32,7 @@ def main():
         print("passed delay")
         channel = 0#GPIO.wait_for_edge(18, GPIO.FALLING)
         print("passed egde detection")
-        if channel is LOW:
+        if channel == 0:
             print("passed for loop")
             LED_NEXT_STATE[0] = not LED_NEXT_STATE[0]
             GPIO.output(16, LED_NEXT_STATE[0])
