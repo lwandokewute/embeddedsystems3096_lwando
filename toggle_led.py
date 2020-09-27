@@ -27,14 +27,13 @@ LED_NEXT_STATE = [True]
 #Main function for using the switch
 def main():
     while True:    
-        channel = GPIO.wait_for_edge(18, GPIO.FALLING)
+        channel = GPIO.wait_for_edge(18, GPIO_FALLING, timeout=1000)
         if channel is 0:
             print('Press detected')
             LED_NEXT_STATE[0] = not LED_NEXT_STATE[0]
             GPIO.output(16, LED_NEXT_STATE[0])
         
         GPIO.remove_event_detect(18)
-        time.sleep(1) # 1 second time delay
         
 #TRIAL & EXCEPTION
 if __name__ == "__main__":
