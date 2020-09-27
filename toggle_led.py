@@ -29,12 +29,17 @@ def main():
     print("Running main loop:")
     while True: 
         time.sleep(1) # 1 second time delay
+        print("passed delay")
         channel = GPIO.wait_for_edge(18, GPIO.FALLING)
+        print("passed egde detection")
         if channel is LOW:
+            print("passed for loop")
             LED_NEXT_STATE[0] = not LED_NEXT_STATE[0]
             GPIO.output(16, LED_NEXT_STATE[0])
+            print("passed reassignment")
         
         GPIO.remove_event_detect(18)
+        print("ready for the next loop")
         
 #TRIAL & EXCEPTION
 if __name__ == "__main__":
