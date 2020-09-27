@@ -28,19 +28,16 @@ LED_NEXT_STATE = [True]
 def main():
     print("Running main loop:")
     while True: 
-        time.sleep(1) # 1 second time delay
-        print("passed delay")
-        channel = GPIO.wait_for_edge(18, GPIO.FALLING)
-        print("passed egde detection", "and channel is:", channel)
-        LED_NEXT_STATE[0] = not LED_NEXT_STATE[0]
-        GPIO.output(16, LED_NEXT_STATE[0])
-        if channel == 0:
-            print("passed for loop")
-            print("passed reassignment")
         
-        GPIO.remove_event_detect(18)
-        print("ready for the next loop")
-       
+        time.sleep(0.5) # 0.5 second time delay
+        
+        #WAITING FOR THE BUTTON TO BE PRESSED
+        channel = GPIO.wait_for_edge(18, GPIO.FALLING)
+        
+        #DO THE FOLLOWING
+        LED_NEXT_STATE[0] = not LED_NEXT_STATE[0]
+        GPIO.output(16, LED_NEXT_STATE[0])       
+        GPIO.remove_event_detect(18)       
         
 #TRIAL & EXCEPTION
 if __name__ == "__main__":
