@@ -27,7 +27,7 @@ LED_NEXT_STATE = [True]
 #Main function for using the switch
 def main():
     while True:    
-        channel = GPIO.wait_for_edge(18, GPIO.FALLING, timeout=500)
+        channel = GPIO.wait_for_edge(18, GPIO.BOTH)
         if channel is 0:
             LED_NEXT_STATE[0] = not LED_NEXT_STATE[0]
             GPIO.output(16, LED_NEXT_STATE[0])
