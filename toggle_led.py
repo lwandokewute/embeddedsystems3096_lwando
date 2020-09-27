@@ -31,7 +31,7 @@ def main():
         time.sleep(1) # 1 second time delay
         print("passed delay")
         channel = GPIO.wait_for_edge(18, GPIO.FALLING)
-        print("passed egde detection")
+        print("passed egde detection", "and channel is:", channel)
         if channel == 0:
             print("passed for loop")
             LED_NEXT_STATE[0] = not LED_NEXT_STATE[0]
