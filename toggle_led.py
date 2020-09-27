@@ -4,6 +4,9 @@ import time
 #Specifying the numbering system
 GPIO.setmode(GPIO.BOARD)
 
+#Setting warnings for changing variables or pins to false
+GPIO.setwarnings(False)
+
 #Setting the gpio's modes
 #Input is pin 15, the push button
 #GPIO.setup(15, GPIO.IN)
